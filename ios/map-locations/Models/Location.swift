@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreLocation
+import SwiftUICore
 
 enum LocationType: String, CaseIterable, Codable, Identifiable {
     
@@ -17,7 +18,24 @@ enum LocationType: String, CaseIterable, Codable, Identifiable {
     case cafe
     case bar
     
-    var id: String { self.rawValue.capitalized }
+    var id: String { self.rawValue }
+    
+    var color: Color {
+        switch self {
+            case .restaurant:
+                return .red
+            case .museum:
+                return .blue
+            case .park:
+                return .green
+            case .landmark:
+                return .purple
+            case .cafe:
+                return .orange
+            case .bar:
+                return .brown
+        }
+    }
 }
 
 struct Attribute: Codable {
@@ -38,7 +56,13 @@ enum CodableValue: Codable {
         } else if let stringVal = try? container.decode(String.self) {
             self = .string(stringVal)
         } else {
-            throw DecodingError.typeMismatch(CodableValue.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for CodableValue"))
+            throw DecodingError.typeMismatch(
+                CodableValue.self,
+                DecodingError.Context(
+                    codingPath: decoder.codingPath,
+                    debugDescription: "Wrong type for CodableValue"
+                )
+            )
         }
     }
     

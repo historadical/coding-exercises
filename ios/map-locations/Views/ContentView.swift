@@ -10,22 +10,36 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject private var viewModel = LocationViewModel()
+    @State private var selectedLocation: Location? = nil
     
     var body: some View {
         VStack {
                 // Filtering Control
-            Picker("Location Type", selection: $viewModel.selectedLocationType) {
-                Text("All").tag(LocationType?.none)
-                ForEach(LocationType.allCases) { type in
-                    Text(type.rawValue.capitalized).tag(type as LocationType?)
+            HStack {
+                Text("Filter by Type: \(viewModel.selectedLocationType?.rawValue.capitalized ?? "All")")
+                    .font(.headline)
+                Spacer()
+                Menu {
+                    Button("All") {
+                        viewModel.selectedLocationType = nil
+                    }
+                    ForEach(LocationType.allCases) { type in
+                        Button(type.rawValue.capitalized) {
+                            viewModel.selectedLocationType = type
+                        }
+                    }
+                } label: {
+                    Label("Select", systemImage: "line.horizontal.3.decrease.circle")
                 }
             }
-            .pickerStyle(SegmentedPickerStyle())
             .padding()
             
                 // Map View
-            MapView(locations: viewModel.filteredLocations)
+            MapView(locations: $viewModel.filteredLocations, selectedLocation: $selectedLocation)
                 .edgesIgnoringSafeArea(.all)
+                .sheet(item: $selectedLocation) { location in
+                    LocationDetailView(location: location)
+                }
         }
     }
 }
