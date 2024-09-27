@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject private var viewModel = LocationViewModel()
-    @State private var selectedLocation: Location? = nil
     
     var body: some View {
         VStack {
@@ -35,11 +34,8 @@ struct ContentView: View {
             .padding()
             
                 // Map View
-            MapView(locations: $viewModel.filteredLocations, selectedLocation: $selectedLocation)
+            MapView(locations: viewModel.filteredLocations)
                 .edgesIgnoringSafeArea(.all)
-                .sheet(item: $selectedLocation) { location in
-                    LocationDetailView(location: location)
-                }
         }
     }
 }
