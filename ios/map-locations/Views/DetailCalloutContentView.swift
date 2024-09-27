@@ -1,5 +1,5 @@
 //
-//  DetailColloutContentView.swift
+//  DetailCalloutContentView.swift
 //  map-locations
 //
 //  Created by Nic on 9/27/24.

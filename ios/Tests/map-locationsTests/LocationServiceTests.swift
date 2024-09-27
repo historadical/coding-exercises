@@ -1,5 +1,5 @@
 //
-//  map_locationsTests.swift
+//  LocationServiceTests.swift
 //  map-locationsTests
 //
 //  Created by Nic on 9/26/24.

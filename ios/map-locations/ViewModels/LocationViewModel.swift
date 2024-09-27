@@ -15,14 +15,16 @@ class LocationViewModel: ObservableObject {
     @Published var selectedLocationType: LocationType? = nil
     
     private var cancellables = Set<AnyCancellable>()
-    private let locationService = LocationService()
+    private let locationService: LocationServiceProtocol
     
-    init() {
+        // Updated initializer
+    init(locationService: LocationServiceProtocol = LocationService()) {
+        self.locationService = locationService
         fetchLocations()
         setupBindings()
     }
     
-    private func fetchLocations() {
+    func fetchLocations() {
         Task {
             do {
                 let locations = try await locationService.fetchLocations()
