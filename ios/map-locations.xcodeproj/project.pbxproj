@@ -18,19 +18,11 @@
 			remoteGlobalIDString = 040D5D6F2CA5EEAF00B5FB58;
 			remoteInfo = "map-locations";
 		};
-		040D5D8B2CA5EEB000B5FB58 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 040D5D682CA5EEAF00B5FB58 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 040D5D6F2CA5EEAF00B5FB58;
-			remoteInfo = "map-locations";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		040D5D702CA5EEAF00B5FB58 /* map-locations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "map-locations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		040D5D802CA5EEB000B5FB58 /* map-locationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "map-locationsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		040D5D8A2CA5EEB000B5FB58 /* map-locationsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "map-locationsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		043435422CA5F1B900D20418 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -45,11 +37,6 @@
 			path = "map-locationsTests";
 			sourceTree = "<group>";
 		};
-		040D5D8D2CA5EEB000B5FB58 /* map-locationsUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "map-locationsUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +49,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		040D5D7D2CA5EEB000B5FB58 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		040D5D872CA5EEB000B5FB58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,7 +73,6 @@
 			children = (
 				040D5D702CA5EEAF00B5FB58 /* map-locations.app */,
 				040D5D802CA5EEB000B5FB58 /* map-locationsTests.xctest */,
-				040D5D8A2CA5EEB000B5FB58 /* map-locationsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				040D5D832CA5EEB000B5FB58 /* map-locationsTests */,
-				040D5D8D2CA5EEB000B5FB58 /* map-locationsUITests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -163,29 +141,6 @@
 			productReference = 040D5D802CA5EEB000B5FB58 /* map-locationsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		040D5D892CA5EEB000B5FB58 /* map-locationsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 040D5D9A2CA5EEB000B5FB58 /* Build configuration list for PBXNativeTarget "map-locationsUITests" */;
-			buildPhases = (
-				040D5D862CA5EEB000B5FB58 /* Sources */,
-				040D5D872CA5EEB000B5FB58 /* Frameworks */,
-				040D5D882CA5EEB000B5FB58 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				040D5D8C2CA5EEB000B5FB58 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				040D5D8D2CA5EEB000B5FB58 /* map-locationsUITests */,
-			);
-			name = "map-locationsUITests";
-			packageProductDependencies = (
-			);
-			productName = "map-locationsUITests";
-			productReference = 040D5D8A2CA5EEB000B5FB58 /* map-locationsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -200,10 +155,6 @@
 						CreatedOnToolsVersion = 16.0;
 					};
 					040D5D7F2CA5EEB000B5FB58 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 040D5D6F2CA5EEAF00B5FB58;
-					};
-					040D5D892CA5EEB000B5FB58 = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 040D5D6F2CA5EEAF00B5FB58;
 					};
@@ -225,7 +176,6 @@
 			targets = (
 				040D5D6F2CA5EEAF00B5FB58 /* map-locations */,
 				040D5D7F2CA5EEB000B5FB58 /* map-locationsTests */,
-				040D5D892CA5EEB000B5FB58 /* map-locationsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,13 +189,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		040D5D7E2CA5EEB000B5FB58 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		040D5D882CA5EEB000B5FB58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,13 +212,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		040D5D862CA5EEB000B5FB58 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -283,11 +219,6 @@
 			isa = PBXTargetDependency;
 			target = 040D5D6F2CA5EEAF00B5FB58 /* map-locations */;
 			targetProxy = 040D5D812CA5EEB000B5FB58 /* PBXContainerItemProxy */;
-		};
-		040D5D8C2CA5EEB000B5FB58 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 040D5D6F2CA5EEAF00B5FB58 /* map-locations */;
-			targetProxy = 040D5D8B2CA5EEB000B5FB58 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -503,38 +434,6 @@
 			};
 			name = Release;
 		};
-		040D5D9B2CA5EEB000B5FB58 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "laughterconsulting.map-locationsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "map-locations";
-			};
-			name = Debug;
-		};
-		040D5D9C2CA5EEB000B5FB58 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "laughterconsulting.map-locationsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "map-locations";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -561,15 +460,6 @@
 			buildConfigurations = (
 				040D5D982CA5EEB000B5FB58 /* Debug */,
 				040D5D992CA5EEB000B5FB58 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		040D5D9A2CA5EEB000B5FB58 /* Build configuration list for PBXNativeTarget "map-locationsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				040D5D9B2CA5EEB000B5FB58 /* Debug */,
-				040D5D9C2CA5EEB000B5FB58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

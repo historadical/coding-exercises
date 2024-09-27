@@ -7,7 +7,11 @@
 
 import Foundation
 
-class LocationService {
+protocol LocationServiceProtocol {
+    func fetchLocations() async throws -> [Location]
+}
+
+class LocationService: LocationServiceProtocol {
     
     func fetchLocations() async throws -> [Location] {
         guard let url = URL(string: Constants.locationsDataURLString) else {
